@@ -12,6 +12,7 @@ body {
 input {
   color: white;
   font-size: 20px;
+  width: 150px;
   /* form 아래에 있는 이미지(부모) 그대로 적용 */
   background-color: transparent;
   border: none;
@@ -96,14 +97,14 @@ main {
   font-size: 100px;
 }
 
+#login-form input {
+  width: 200px;
+  text-align: center;
+}
+
 #greeting {
   font-size: 50px;
 }
-
-/* #todo {
-  display: flex;
-  align-items: center;
-} */
 
 #todo-form input {
   width: 350px;
