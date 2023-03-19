@@ -1,0 +1,155 @@
+* {
+  font-family: "Arial";
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  color: white;
+}
+
+input {
+  color: white;
+  font-size: 20px;
+  /* form 아래에 있는 이미지(부모) 그대로 적용 */
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid whitesmoke;
+}
+
+input::placeholder {
+  color: whitesmoke;
+}
+
+input:focus {
+  outline: none;
+}
+
+button {
+  font-size: 23px;
+  color: red;
+  background-color: transparent;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: grey;
+}
+
+h2 {
+  margin: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+/* ------------ header ------------ */
+
+.search-form {
+  position: absolute;
+  margin: 20px 0px 0px 10px;
+}
+
+.weather {
+  /* 
+  float: right
+  처음에 우측 정렬하려고 위와 같은 방식으로 float를 썼는데 이 친구는 오른쪽에 아예 
+  다른 영역이 생성된 느낌이라 main의 flex가 망가졌음
+  -> 우측에 있는 weather의 너비를 제외한 범위에서 flex 가운데 정렬이 적용됨
+
+  아래와 같이 하면 그냥 맨 오른쪽에 뜸
+  */
+  position: absolute;
+  right: 0;
+
+  /* 상 우 하 좌 */
+  margin: 10px 20px 0px 0px;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.weather_container {
+  display: flex;
+  align-items: center;
+}
+
+/* ------------ main ------------ */
+
+main {
+  height: 100%;
+  /* gap: 100px; */
+  display: flex;
+  flex-direction: column;
+  /* flex 방향 기준 정렬 */
+  align-items: center;
+  /* flex 수직 방향 기준 정렬 */
+  justify-content: center;
+}
+
+.clock {
+  font-size: 100px;
+}
+
+#greeting {
+  font-size: 50px;
+}
+
+/* #todo {
+  display: flex;
+  align-items: center;
+} */
+
+#todo-form input {
+  width: 350px;
+  font-size: 25px;
+  text-align: center;
+}
+
+#todo-list {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#todo-list li {
+  margin-right: 30px;
+  font-size: 25px;
+}
+
+/* ------------ footer ------------ */
+
+.quote {
+  position: fixed;
+  font-family: "Allerta Stencil";
+  bottom: 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.quote_quote {
+  font-size: 30px;
+  font-style: italic;
+}
+
+.quote_author {
+  font-size: 20px;
+}
+
+.copyright {
+  position: fixed;
+  font-size: 15px;
+  bottom: 5px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
